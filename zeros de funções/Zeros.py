@@ -13,7 +13,7 @@ elif met == 'ponto fixo':
     f_phi = input('phi> ')
     vlr = float(input('chute inicial> '))
     precisão = float(input('precisão> '))
-    print(resolução(met=met, função=fc, precisão=precisão, phi=f_phi, a1=vlr))
+    print(resolução(met=met, função=fc, precisão=precisão, a1=vlr, phi=f_phi))
 
 elif met == 'newton-raphson':
     fc = input('função> ')

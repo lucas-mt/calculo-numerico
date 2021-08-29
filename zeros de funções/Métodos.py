@@ -6,7 +6,7 @@ def f(função):
     return expand(função)
 
 def resolva(função, num):
-    return f(função).subs(x, num)
+    return float(f(função).subs(x, num))
 
 def diff_resolva(função, num):
     return resolva(diff(função), num)
@@ -16,9 +16,6 @@ def bissecção(a, b):
 
 def falsa_posição(a, b, função):
     return (a*resolva(função, b) - b*resolva(função, a))/(resolva(função, b)-resolva(função, a))
-
-def ponto_fixo(vlr, phi):
-    return resolva(phi, vlr)
 
 def Newton_Raphson(vlr, função):
     return vlr - (resolva(função, vlr)/diff_resolva(função, vlr))

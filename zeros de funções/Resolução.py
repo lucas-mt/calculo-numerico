@@ -99,10 +99,10 @@ def resolução(met, função, precisão, a1, phi='', b1=0):
         xn = a1
         while True:
             sol_x0 = resolva(função, xn)
-            print(f'{xn:.7f}|{sol_x0:.7f}|')
+            print(f'{xn:.7f}|{sol_x0:.7f}')
             if abs(sol_x0) <= abs(precisão):
                 return xn
-            xn = resolva(xn, phi)
+            xn = resolva(phi, xn)
 
     elif met == 'newton-raphson':
         print(f'''{"x".center(10)}|{"f(x)".center(10)}
@@ -110,7 +110,7 @@ def resolução(met, função, precisão, a1, phi='', b1=0):
         xn = a1
         while True:
             sol_x0 = resolva(função, xn)
-            print(f'{xn:.7f}|{sol_x0:.7f}|')
+            print(f'{xn:.7f}|{sol_x0:.7f}')
             if abs(sol_x0) <= abs(precisão):
                 return xn
             xn = Newton_Raphson(xn, função)
@@ -122,8 +122,11 @@ def resolução(met, função, precisão, a1, phi='', b1=0):
         while True:
             sol_x0 = resolva(função, x0)
             sol_x1 = resolva(função, x1)
+            print(f'{x0:.7f}|{sol_x0:.7f}')
             if abs(sol_x0) <= abs(precisão):
                 return x0
+            print(f'{x1:.7f}|{sol_x1:.7f}')
             if abs(sol_x1) <= abs(precisão):
                 return x1
-            
+            x0 = secante(x0, x1, função)
+            x1 = secante(x0, x1, função)
