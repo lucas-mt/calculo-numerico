@@ -39,5 +39,3 @@ def Dec_Hex(num):
     vlr += trans_num(num_inteiro_inverso, hex_equi, 1)
     vlr += trans_num(num_fracionado, hex_equi, -1)
     return vlr
-
-print(Dec_Hex('17.C'))
