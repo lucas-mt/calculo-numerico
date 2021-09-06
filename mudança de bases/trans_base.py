@@ -14,7 +14,7 @@ if operação == 1:
     elif base == 16:
         print(BaseHex(vlr))
 elif operação == 2:
-    vlr = float(input('número> '))
+    vlr = input('número> ')
     base = int(input('Base de origem> '))
     if base == 2 or base == 8:
         print(Dec_BinOct(vlr, base))
@@ -32,3 +32,4 @@ elif operação == 3:
         print(BaseBinOct(vlr_dec, basetrans))
     elif basetrans == 16:
         print(BaseHex(vlr_dec))
+
