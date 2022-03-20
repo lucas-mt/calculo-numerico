@@ -96,7 +96,7 @@ def resolução(met, função, precisão, a1, phi='', b1=0):
     elif met == 'ponto fixo':
         print(f'''{"x".center(10)}|{"f(x)".center(10)}
 {"-"*10}|{"-"*10}''')
-        xn = a1
+        xn = resolva(phi, a1)
         while True:
             sol_x0 = resolva(função, xn)
             print(f'{xn:.7f}|{sol_x0:.7f}')
