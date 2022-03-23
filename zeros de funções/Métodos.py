@@ -22,13 +22,3 @@ def Newton_Raphson(vlr, função):
 
 def secante(vl0, vl1, função):
     return vl1 - (((vl1-vl0)*resolva(função, vl1))/(resolva(função, vl1)-resolva(função, vl0)))
-
-'''def verificação(função, a1, b1):
-    fa1, fb1 = resolva(função, a1), resolva(função, b1)
-    if fa1 < 0 and fb1 > 0:
-        if diff_resolva(função, a1) < diff_resolva(função, b1):
-            return True
-    elif fa1 > 0 and fb1 < 0:
-         if diff_resolva(função, a1) > diff_resolva(função, b1):
-            return True
-    return False'''
